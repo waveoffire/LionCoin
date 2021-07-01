@@ -7,9 +7,9 @@
             <img
               class="logo-img__small"
               src="assets/svg/lion.svg"
-              alt="space lion logo"
+              alt="Galactic lion logo"
             />
-            <h4 class="logo-title__small">SpaceLion Token</h4>
+            <h4 class="logo-title__small">GalacticLion Token</h4>
           </div>
           <nav class="nav">
             <ul v-if="!mobile" class="nav-list">
@@ -21,16 +21,20 @@
             </ul>
             <div v-else @click="menuToggle()">
               <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-              <ul v-if="toggle" class="nav-list">
-                <li><a class="nav-item" href="#tokenomics">Tokenomics</a></li>
-                <li><a class="nav-item" href="#how-to">How To Buy</a></li>
-                <li><a class="nav-item" href="#token-info">Token Info</a></li>
-                <li><a class="nav-item" href="#team">Team</a></li>
-                <li><a class="nav-item" href="#contact">Contact</a></li>
-              </ul>
             </div>
           </nav>
         </section>
+        <ul
+          v-if="toggle"
+          style="display: block; text-align: right"
+          class="nav-list"
+        >
+          <li><a class="nav-item" href="#tokenomics">Tokenomics</a></li>
+          <li><a class="nav-item" href="#how-to">How To Buy</a></li>
+          <li><a class="nav-item" href="#token-info">Token Info</a></li>
+          <li><a class="nav-item" href="#team">Team</a></li>
+          <li><a class="nav-item" href="#contact">Contact</a></li>
+        </ul>
       </header>
       <div class="hero">
         <div id="particles-js"></div>
@@ -39,9 +43,9 @@
           <img
             class="logo-img"
             src="/assets/svg/lion.svg"
-            alt="space lion logo"
+            alt="Galactic lion logo"
           />
-          <h1 class="logo-title">SpaceLion</h1>
+          <h1 style="font-size: 4rem" class="logo-title">GalacticLion</h1>
           <span class="logo-sub">The King of The Crypto Jungle</span>
           <a
             href="#"

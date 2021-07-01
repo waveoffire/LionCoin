@@ -1,0 +1,95 @@
+.section {
+  max-width: 1100px;
+  width: 100%;
+  // min-height: 800px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// flex
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+// buttons
+
+.btn {
+  --color: var(--accent);
+  font-family: kanit;
+  font-weight: 500;
+  border-style: solid;
+  border-radius: 25px;
+  // border-width: 3px;
+  border-color: var(--accent);
+  padding: 1.3rem;
+  margin: 1rem;
+}
+
+.btn-grad {
+  --alpha: 0.1;
+  --spread: 20px;
+  --g1: var(--c1);
+  --g2: var(--c2);
+  --g3: var(--c4);
+  --border: 5px;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: box-shadow;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  background-clip: padding-box; /* !importanté */
+  border: solid var(--border) transparent; /* !importanté */
+  border-radius: 30px;
+  box-shadow: -5px -5px var(--spread) rgba(var(--c1), var(--alpha)),
+    5px 5px var(--spread) rgba(var(--c1), var(--alpha)),
+    -5px 5px var(--spread) rgba(var(--c4), var(--alpha)), inset 0 0 10px rgba(0, 0, 0, 0.8);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: calc(var(--border) * -1); /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(
+      to right,
+      rgba(var(--g1), 1),
+      rgba(var(--g2), 1),
+      rgba(var(--g3), 1)
+    );
+  }
+
+  &:hover {
+    --alpha: 0.3;
+    --spread: 30px;
+  }
+}

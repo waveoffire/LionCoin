@@ -56,6 +56,7 @@
           </ul>
         </transition>
       </header>
+
       <div class="hero">
         <div id="particles-js"></div>
         <div class="overlay"></div>
@@ -89,31 +90,22 @@
         </section>
       </div>
       <div class="desc">
+        <div id="particles-js2"></div>
         <section id="tokenomics" class="section tokenomics">
           <h2 class="header-2">Tokenomics</h2>
-
           <div class="tokenomics-div">
+            <i class="fa fa-fw fa-money fa-5x" aria-hidden="true"></i>
             <h3>Total Supply</h3>
-            <span
-              ><i class="fa fa-fw fa-money" aria-hidden="true"></i>
-              1,000,000,000,000
-            </span>
-
+            <span> 1,000,000,000,000 </span>
+          </div>
+          <div class="tokenomics-div">
+            <i class="fa fa-fw fa-fire fa-5x" aria-hidden="true"></i>
             <h3>Token redistribution</h3>
 
-            <span class="redistirbution"
-              ><i class="fa fa-fw fa-fire" aria-hidden="true"></i> 4% Burn to
-              liquidity</span
-            >
+            <span class="redistirbution"> 4% Burn to liquidity</span>
 
-            <span class="redistirbution"
-              ><i class="fa fa-fw fa-hand-rock-o" aria-hidden="true"></i> 4%
-              Distribution to the holders
-            </span>
-            <span class="redistirbution"
-              ><i class="fa fa-fw fa-credit-card" aria-hidden="true"></i> 2% To
-              the marketing wallet
-            </span>
+            <span class="redistirbution"> 4% Distribution to the holders </span>
+            <span class="redistirbution"> 2% To the marketing wallet </span>
           </div>
         </section>
         <section id="how-to" class="section how-to">
@@ -215,6 +207,36 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+#particles-js {
+  position: absolute;
+  z-index: 10;
+  opacity: 0.7;
+  width: 120%;
+  height: 120%;
+  background-color: transparent;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 60%;
+}
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+:root {
+  --c1: 20, 255, 161;
+  --c2: 0, 151, 191;
+  --c3: 68, 112, 210;
+  --c4: 146, 67, 232;
+  --c5: 227, 21, 255;
+}
+
 .liontext {
   font-size: 3.2rem;
 }
@@ -239,14 +261,25 @@ export default Vue.extend({
 .tokenomics {
   padding-top: 3rem;
 }
+
 .tokenomics-div {
-  text-align: left;
-  margin: 10px 0;
-  border-radius: 20px;
+  position: relative;
+  display: inline-table;
+
+  width: 48%;
+  height: 300px;
+  i {
+    margin-top: 15px;
+    color: rgba(rgb(235, 222, 41), 1);
+  }
+
+  margin: 10px 5px;
+
+  border-radius: 25px;
   background-color: rgba(114, 72, 221, 0.279);
-  border: 1px solid rgba(114, 72, 221, 0.694);
+  // border: 1px solid rgba(114, 72, 221, 0.694);
   padding-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 0;
   h3 {
     font-size: 1.3rem;
   }
@@ -254,8 +287,44 @@ export default Vue.extend({
     display: block;
   }
 }
+@media only screen and (max-width: 768px) {
+  .tokenomics-div {
+    display: block;
+    width: 100%;
+  }
+}
+.tokenomics-div::before {
+  content: "";
+  animation: 10s rotate linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  padding: 4px;
+  background: linear-gradient(
+    var(--angle),
+    rgba(var(--c1), 1),
+    rgba(var(--c2), 1),
+    rgba(var(--c3), 1),
+    rgba(var(--c4), 1),
+    rgba(var(--c5), 1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
 .desc {
-  background-color: #1b2137;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #1b2137,
+    #1b2137 25%,
+    #1b2137 50%,
+    #1b2137 75%
+  );
 }
 .socials {
   padding: 20px 0;
@@ -266,16 +335,15 @@ export default Vue.extend({
 }
 .redistirbution {
   padding-bottom: 20px;
-  i {
-    color: rgba(20, 255, 161, 1);
-  }
 }
 .how-to-step {
+  border-radius: 25px;
+  position: relative;
   text-align: left;
   margin: 10px 0;
-  border-radius: 20px;
+
   background-color: rgba(114, 72, 221, 0.279);
-  border: 1px solid rgba(114, 72, 221, 0.694);
+  padding-top: 1px;
   padding-bottom: 20px;
   padding-left: 20px;
   h3 {
@@ -289,10 +357,29 @@ export default Vue.extend({
     color: rgba(255, 255, 255, 0.435);
   }
 }
+.how-to-step::before {
+  content: "";
+  animation: 10s rotate linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  padding: 4px;
+  background: linear-gradient(
+    var(--angle),
+    rgba(var(--c1), 1),
+    rgba(var(--c2), 1),
+    rgba(var(--c3), 1),
+    rgba(var(--c4), 1),
+    rgba(var(--c5), 1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
 .how-to {
   padding-top: 3rem;
-}
-.fa-money {
-  color: rgba(20, 255, 161, 1);
 }
 </style>

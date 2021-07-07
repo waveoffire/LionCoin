@@ -7,11 +7,9 @@
         <div id="particles-js2"></div>
         <tokenomics-app />
         <how-to-app />
+        <roadmap-app />
         <section id="token-info" class="section token-info">
-          <h2 class="header-2">Token Info</h2>
-        </section>
-        <section id="team" class="section team">
-          <h2 class="header-2">Team</h2>
+          <h2 class="header-2">Token info</h2>
         </section>
       </div>
       <footer-app />
@@ -25,6 +23,7 @@ import TokenomicsApp from "./modules/Tokenomics.vue";
 import HowToApp from "./modules/How-to.vue";
 import HeaderApp from "./modules/Header.vue";
 import HeroApp from "./modules/Hero.vue";
+import RoadmapApp from "./modules/Roadmap.vue";
 import Vue from "vue";
 
 export default Vue.extend({
@@ -35,6 +34,7 @@ export default Vue.extend({
     HowToApp,
     HeaderApp,
     HeroApp,
+    RoadmapApp,
   },
 });
 </script>

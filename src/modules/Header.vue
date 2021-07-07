@@ -13,8 +13,9 @@
         <ul v-if="!mobile" class="nav-list">
           <li><a class="nav-item" href="#tokenomics">Tokenomics</a></li>
           <li><a class="nav-item" href="#how-to">How To Buy</a></li>
+          <li><a class="nav-item" href="#roadmap">Roadmap</a></li>
           <li><a class="nav-item" href="#token-info">Token Info</a></li>
-          <li><a class="nav-item" href="#team">Team</a></li>
+
           <li><a class="nav-item" href="#contact">Contact</a></li>
         </ul>
         <div v-else @click="menuToggle()">
@@ -39,13 +40,14 @@
           >
         </li>
         <li>
+          <a @click="menuToggle()" class="nav-item" href="#roadmap">Roadmap</a>
+        </li>
+        <li>
           <a @click="menuToggle()" class="nav-item" href="#token-info"
             >Token Info</a
           >
         </li>
-        <li>
-          <a @click="menuToggle()" class="nav-item" href="#team">Team</a>
-        </li>
+
         <li>
           <a @click="menuToggle()" class="nav-item" href="#contact">Contact</a>
         </li>

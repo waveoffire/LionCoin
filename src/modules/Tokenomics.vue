@@ -1,12 +1,13 @@
 <template>
   <section id="tokenomics" class="section tokenomics">
     <h2 class="header-2">Tokenomics</h2>
-    <div class="tokenomics-div">
+
+    <div class="tokenomics-div" data-aos="fade-right" data-aos-duration="1000">
       <i class="fa fa-fw fa-money fa-5x" aria-hidden="true"></i>
       <h3>Total Supply</h3>
       <span> 1,000,000,000,000 </span>
     </div>
-    <div class="tokenomics-div">
+    <div class="tokenomics-div" data-aos="fade-left" data-aos-duration="1000">
       <i class="fa fa-fw fa-fire fa-5x" aria-hidden="true"></i>
       <h3>Token redistribution</h3>
 
@@ -35,6 +36,7 @@ export default Vue.extend({
 }
 
 .tokenomics-div {
+  z-index: 5;
   position: relative;
   display: inline-table;
 
@@ -57,6 +59,10 @@ export default Vue.extend({
   }
   span {
     display: block;
+  }
+
+  &:hover {
+    background-color: rgba(114, 72, 221, 0.5);
   }
 }
 @media only screen and (max-width: 768px) {

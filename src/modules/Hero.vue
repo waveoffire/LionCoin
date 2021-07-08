@@ -152,19 +152,6 @@ export default Vue.extend({
   margin-bottom: 2.5rem;
 }
 
-#particles-js {
-  position: absolute;
-  z-index: 10;
-  opacity: 0.7;
-  width: 120%;
-  height: 120%;
-  background-color: transparent;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 60% 60%;
-}
-
 @media only screen and (max-width: 768px) {
   .liontext {
     font-size: 3.2rem;

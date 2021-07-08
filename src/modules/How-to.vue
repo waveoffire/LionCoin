@@ -1,14 +1,14 @@
 <template>
   <section id="how-to" class="section how-to">
     <h2 class="header-2">How to buy</h2>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3>
         <span>01.</span> Get a TrustWallet, or use any other BSC compatibile
         wallet.
       </h3>
       <span> You can download it from AppStore/Google Play.</span>
     </div>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3>
         <span>02.</span> Go to dApps, or type pancakeswap.finance into adress
         bar.
@@ -18,24 +18,24 @@
         to swap BSC to $GLION.</span
       >
     </div>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3><span>03.</span> Connect your wallet to PancakeSwap.</h3>
       <span>
         Click "Connect" at the top right of the screen, and then navigate to
         "Trade" on the left sidebar.</span
       >
     </div>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3><span>04.</span> Select the $GLION token‍</h3>
       <span>
         Click on the "Select a Currency" button, and enter the $GLION token
         contract: (tutej nasz konktrakt który zdeplojujem)</span
       >
     </div>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3><span>05.</span> Adjust your slippage to 11-13%‍</h3>
     </div>
-    <div class="how-to-step">
+    <div class="how-to-step" data-aos="zoom-in" data-aos-duration="1000">
       <h3><span>06.</span> Swap away!‍</h3>
     </div>
   </section>
@@ -54,6 +54,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .how-to-step {
+  z-index: 5;
   border-radius: 25px;
   position: relative;
   text-align: left;
@@ -72,6 +73,9 @@ export default Vue.extend({
   }
   span {
     color: rgba(255, 255, 255, 0.435);
+  }
+  &:hover {
+    background-color: rgba(114, 72, 221, 0.5);
   }
 }
 .how-to-step::before {

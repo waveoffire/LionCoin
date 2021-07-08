@@ -20,31 +20,56 @@
         </div>
       </div>
       <div class="text-div">
-        <div class="dot-text">
+        <div
+          class="dot-text"
+          ddata-aos-anchor-placement="center-center"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, autem
           delectus quaerat ullam quasi officia natus assumenda itaque, earum
           repudiandae sunt aliquid labore adipisci est doloribus ea facere nulla
           ab.
         </div>
-        <div class="dot-text">
+        <div
+          class="dot-text"
+          data-aos-anchor-placement="center-center"
+          data-aos="fade-up-left"
+          data-aos-duration="1000"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
           eos dignissimos enim tempore, rerum necessitatibus odio est cumque
           alias corrupti itaque odit repellat eligendi exercitationem facere.
           Earum modi necessitatibus mollitia.
         </div>
-        <div class="dot-text">
+        <div
+          class="dot-text"
+          data-aos-anchor-placement="center-center"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+        >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum ad
           possimus dolores iusto vel enim error culpa qui! Dolor eveniet
           repellendus praesentium magni molestiae excepturi distinctio, eligendi
           quasi delectus suscipit!
         </div>
-        <div class="dot-text">
+        <div
+          class="dot-text"
+          data-aos-anchor-placement="center-center"
+          data-aos="fade-up-left"
+          data-aos-duration="1000"
+        >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
           possimus nesciunt tenetur ipsa quos incidunt, inventore asperiores
           veritatis, magni vero a est ab distinctio aperiam dolorum libero
           repellendus quidem? Adipisci.
         </div>
-        <div class="dot-text">
+        <div
+          class="dot-text"
+          data-aos-anchor-placement="center-center"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel magnam
           veniam quam ea ex sint quo? Recusandae illum excepturi rerum, eius,
           mollitia inventore est qui adipisci a esse quibusdam.
@@ -106,6 +131,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .timeline-grid {
+  z-index: 5;
   position: relative;
 }
 .text-div {
@@ -195,6 +221,7 @@ export default Vue.extend({
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 .dot-text::before {
   content: "";

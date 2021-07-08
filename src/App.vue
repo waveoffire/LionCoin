@@ -5,13 +5,10 @@
       <hero-app />
       <div class="desc">
         <span class="particles-gif" alt="this slowpoke moves" />
-
         <tokenomics-app />
         <how-to-app />
         <roadmap-app />
-        <section id="token-info" class="section token-info">
-          <h2 class="header-2">Token info</h2>
-        </section>
+        <token-info-app />
       </div>
       <footer-app />
     </main>
@@ -25,8 +22,9 @@ import HowToApp from "./modules/How-to.vue";
 import HeaderApp from "./modules/Header_menu.vue";
 import HeroApp from "./modules/Hero.vue";
 import RoadmapApp from "./modules/Roadmap.vue";
+import TokenInfoApp from "./modules/TokenInfo.vue";
 import Vue from "vue";
-
+import AOS from "aos";
 export default Vue.extend({
   name: "App",
   components: {
@@ -36,6 +34,10 @@ export default Vue.extend({
     HeaderApp,
     HeroApp,
     RoadmapApp,
+    TokenInfoApp,
+  },
+  created() {
+    AOS.init();
   },
 });
 </script>
@@ -51,6 +53,7 @@ body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--type-light);
+  overflow-x: hidden;
 }
 
 body {
@@ -82,6 +85,7 @@ h1 {
   font-weight: 500;
 }
 .section {
+  z-index: 2;
   max-width: 1100px;
   width: 100%;
   // min-height: 800px;
@@ -118,7 +122,7 @@ h1 {
 }
 .particles-gif {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   opacity: 0.3;
   width: 100%;
   height: 100%;
@@ -163,6 +167,7 @@ h1 {
 
 .desc {
   position: relative;
+  z-index: 3;
   background: linear-gradient(
     to bottom,
     #1b2137,

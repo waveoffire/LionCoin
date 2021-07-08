@@ -1,7 +1,6 @@
 <template>
   <div class="hero">
-    <div id="particles-js"></div>
-    <div class="overlay"></div>
+    <span class="particles-gif" alt="this slowpoke moves" />
     <section id="hero" class="hero-content section flex column center">
       <img class="logo-img" src="/assets/svg/lion.svg" alt="Lion Space logo" />
       <h1 class="logo-title liontext">Lion Space</h1>
@@ -106,29 +105,28 @@ export default Vue.extend({
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  z-index: 12;
-  bottom: 0;
-  height: 40vh;
-  width: 100%;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(black),
-    to(rgba(0, 0, 0, 0))
+  background: linear-gradient(
+    to bottom,
+    #00000000 0%,
+    #00000000 80%,
+    #00000000 100%
   );
   background: linear-gradient(
     to bottom,
-    #00000000,
-    #00000000 60%,
+    #00000091 0%,
+    #00000091 80%,
     #1b2137 100%
   );
 }
 
+#app {
+  background: linear-gradient(
+    to bottom,
+    #00000000 0%,
+    #1b2137 80%,
+    #1b2137 100%
+  );
+}
 .hero-content {
   position: absolute;
   z-index: 14;

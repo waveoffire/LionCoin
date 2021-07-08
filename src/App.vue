@@ -4,7 +4,8 @@
       <header-app />
       <hero-app />
       <div class="desc">
-        <div id="particles-js2"></div>
+        <span class="particles-gif" alt="this slowpoke moves" />
+
         <tokenomics-app />
         <how-to-app />
         <roadmap-app />
@@ -21,7 +22,7 @@
 import FooterApp from "./modules/Footer.vue";
 import TokenomicsApp from "./modules/Tokenomics.vue";
 import HowToApp from "./modules/How-to.vue";
-import HeaderApp from "./modules/Header.vue";
+import HeaderApp from "./modules/Header_menu.vue";
 import HeroApp from "./modules/Hero.vue";
 import RoadmapApp from "./modules/Roadmap.vue";
 import Vue from "vue";
@@ -115,17 +116,22 @@ h1 {
 .align-center {
   align-items: center;
 }
-#particles-js2 {
+.particles-gif {
   position: absolute;
-  z-index: 10;
-  opacity: 0.7;
+  z-index: 1;
+  opacity: 0.3;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-image: url("/assets/bg-gif.gif");
 
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
-  background-position: 60% 60%;
+  background-size: 33% auto;
+}
+@media only screen and (max-width: 768px) {
+  .particles-gif {
+    background-size: 100% auto;
+  }
 }
 @keyframes rotate {
   to {

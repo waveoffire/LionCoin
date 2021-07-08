@@ -76,7 +76,7 @@ export default Vue.extend({
       var dot = document.getElementsByClassName("timeline-dot");
       var textbox = document.getElementsByClassName("dot-text");
       for (var i = 0; i < dot.length; i++) {
-        if (percent > i * 25) {
+        if (percent >= i * 25) {
           if (dot[i].style.backgroundColor != "#14ffa1") {
             dot[i].style.backgroundColor = "#14ffa1";
           }
@@ -96,8 +96,8 @@ export default Vue.extend({
   },
   mounted() {
     this.height =
-      document.getElementById("timeline").getBoundingClientRect().y -
-      window.innerHeight / 2 -
+      document.getElementById("timeline").getBoundingClientRect().top -
+      window.innerHeight / 2 +
       window.scrollY;
     this.timeline();
   },
@@ -152,7 +152,7 @@ export default Vue.extend({
   width: 39px;
   height: 39px;
   min-height: 39px;
-  padding-top: 3px;
+  padding-top: 4px;
   border-style: solid;
   border-width: 3px;
   border-color: rgba(var(--c4), 1);

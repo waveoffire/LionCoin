@@ -139,7 +139,7 @@ export default Vue.extend({
 }
 
 .hero {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   justify-content: center;
   align-items: center;

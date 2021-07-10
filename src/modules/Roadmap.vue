@@ -10,11 +10,11 @@
         id="w-node-d23b6533-20aa-100c-6817-34ece76dab3f-96fbd0ad"
         class="timeline-wrapper"
       >
-        <div style="font-weight: 500" class="timeline-dot">Q2</div>
+        <div class="timeline-dot"></div>
         <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
+        <div class="timeline-dot">Q3</div>
+        <div class="timeline-dot">Q4</div>
+        <div class="timeline-dot">Q1</div>
         <div class="timeline-line-wrapper">
           <div id="timeline" class="time-line" style="height: 0%"></div>
         </div>
@@ -22,40 +22,43 @@
       <div class="text-div">
         <div
           class="dot-text"
-          ddata-aos-anchor-placement="center-center"
+          ddata-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-right"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, autem
-          delectus quaerat ullam quasi officia natus assumenda itaque, earum
-          repudiandae sunt aliquid labore adipisci est doloribus ea facere nulla
-          ab.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          deleniti similique maxime labore nulla qui quas aut eveniet
+          recusandae. Tempore officia debitis hic doloremque id corporis sed
+          minima dolor magni.
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-left"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          eos dignissimos enim tempore, rerum necessitatibus odio est cumque
-          alias corrupti itaque odit repellat eligendi exercitationem facere.
-          Earum modi necessitatibus mollitia.
+          Marketing cooperations <br />
+          Apply for listings on the 3rd party services <br />
+          Rare engineered NFT pack release <br />
+          Unique NFT store portal focused on music project <br />
+          Team expanding <br />
+          Extensive charity campaign with community influence <br />
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-right"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum ad
-          possimus dolores iusto vel enim error culpa qui! Dolor eveniet
-          repellendus praesentium magni molestiae excepturi distinctio, eligendi
-          quasi delectus suscipit!
+          Further marketing expansion <br />
+          NFT store release <br />
+          Apply for cex listing (HotBit/KuCoin/Gate.io) <br />
+          Expanding artist cooperation to enrich our NFT portfolio <br />
+          Mobile app <br />
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-left"
           data-aos-duration="1000"
         >
@@ -66,7 +69,7 @@
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-right"
           data-aos-duration="1000"
         >
@@ -122,7 +125,7 @@ export default Vue.extend({
   mounted() {
     this.height =
       document.getElementById("timeline").getBoundingClientRect().top -
-      window.innerHeight / 2 +
+      (window.innerHeight / 100) * 90 +
       window.scrollY;
     this.timeline();
   },

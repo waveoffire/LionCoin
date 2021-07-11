@@ -9,13 +9,14 @@
         link do czekos tam wallet chyba wiec dlugie
       </div>
       <span class="logo-sub"
-        >Galactic Lion is a fair-launched, community driven project with high
-        expectations and charity intentions. Our mission is to deliver high
-        quality token ecosystem full of utility, changing and inputting a bit
-        extra into the world of meme cryptocurrencies.</span
+        >Lion Space is an ecosystem driven by the belief that talented people
+        should be supported. Our main mission is to digitize art and make it
+        available to a wider community of investors. The future of independent
+        art is NFT and we strongly believe in it. Join us and be the future
+        today.</span
       >
       <a href="#" class="btn btn-grad" target="_blank" rel="noopener noreferrer"
-        >Buy on Pancakeswap V2</a
+        >Buy on dxsale.app</a
       >
       <a href="#" class="btn btn-grad" target="_blank" rel="noopener noreferrer"
         >Live charts</a

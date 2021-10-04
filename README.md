@@ -1,5 +1,6 @@
 # lioncoin
-
+This is the first version of the website design for the LionSpace cryptocurrency
+demo: https://lionspace.smilgin.eu/
 ## Project setup
 ```
 yarn install

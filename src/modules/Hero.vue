@@ -34,13 +34,14 @@ export default Vue.extend({
     return {
       countdown: "",
       timerenable: true,
+      final: 0,
     };
   },
 
   methods: {
     timer() {
       var today = new Date();
-      var final = new Date(2021, 6, 18, 12, 0, 0);
+      var final = this.final;
 
       var toFinal = (final - today) / 1000;
 
@@ -64,6 +65,8 @@ export default Vue.extend({
     },
   },
   beforeMount() {
+    var today = new Date();
+    this.final = new Date().setTime(today.getTime() + 40000);
     this.timer();
     setInterval(() => {
       this.timer();

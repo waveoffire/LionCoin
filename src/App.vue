@@ -8,7 +8,7 @@
         <tokenomics-app />
         <how-to-app />
         <roadmap-app />
-        <token-info-app />
+        <team-app />
       </div>
       <footer-app />
     </main>
@@ -22,7 +22,7 @@ import HowToApp from "./modules/How-to.vue";
 import HeaderApp from "./modules/Header_menu.vue";
 import HeroApp from "./modules/Hero.vue";
 import RoadmapApp from "./modules/Roadmap.vue";
-import TokenInfoApp from "./modules/TokenInfo.vue";
+import TeamApp from "./modules/Team.vue";
 import Vue from "vue";
 import AOS from "aos";
 export default Vue.extend({
@@ -34,7 +34,7 @@ export default Vue.extend({
     HeaderApp,
     HeroApp,
     RoadmapApp,
-    TokenInfoApp,
+    TeamApp,
   },
   created() {
     AOS.init();

@@ -8,7 +8,6 @@
         <roadmap-app />
         <tokenomics-app />
         <how-to-app />
-        <roadmap-app />
         <team-app />
       </div>
       <footer-app />

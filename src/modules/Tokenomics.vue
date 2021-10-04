@@ -44,7 +44,7 @@ export default Vue.extend({
   height: 300px;
   i {
     margin-top: 15px;
-    color: rgba(rgb(235, 222, 41), 1);
+    color: rgb(255, 255, 255);
   }
 
   margin: 10px 5px;

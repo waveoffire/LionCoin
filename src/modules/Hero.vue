@@ -4,14 +4,19 @@
     <section id="hero" class="hero-content section flex column center">
       <img class="logo-img" src="/assets/svg/lion.svg" alt="Lion Space logo" />
       <h1 class="logo-title liontext">Lion Space</h1>
+      <div v-if="timerenable" class="timer">{{ countdown }}</div>
+      <div class="wallet" v-else>
+        link do czekos tam wallet chyba wiec dlugie
+      </div>
       <span class="logo-sub"
-        >Galactic Lion is a fair-launched, community driven project with high
-        expectations and charity intentions. Our mission is to deliver high
-        quality token ecosystem full of utility, changing and inputting a bit
-        extra into the world of meme cryptocurrencies.</span
+        >Lion Space is an ecosystem driven by the belief that talented people
+        should be supported. Our main mission is to digitize art and make it
+        available to a wider community of investors. The future of independent
+        art is NFT and we strongly believe in it. Join us and be the future
+        today.</span
       >
       <a href="#" class="btn btn-grad" target="_blank" rel="noopener noreferrer"
-        >Buy on Pancakeswap V2</a
+        >Buy on dxsale.app</a
       >
       <a href="#" class="btn btn-grad" target="_blank" rel="noopener noreferrer"
         >Live charts</a
@@ -26,7 +31,43 @@ export default Vue.extend({
   name: "Hero",
   components: {},
   data() {
-    return {};
+    return {
+      countdown: "",
+      timerenable: true,
+    };
+  },
+
+  methods: {
+    timer() {
+      var today = new Date();
+      var final = new Date(2021, 6, 18, 12, 0, 0);
+
+      var toFinal = (final - today) / 1000;
+
+      var hours = Math.floor(toFinal / 60 / 60);
+
+      var minutes = Math.floor((toFinal - hours * 60 * 60) / 60);
+      var seconds = Math.floor(toFinal - hours * 60 * 60 - minutes * 60);
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      this.countdown = hours + ":" + minutes + ":" + seconds;
+      if (toFinal <= 0) {
+        this.timerenable = false;
+      }
+    },
+  },
+  beforeMount() {
+    this.timer();
+    setInterval(() => {
+      this.timer();
+    }, 1000);
   },
 });
 </script>
@@ -99,7 +140,7 @@ export default Vue.extend({
 }
 
 .hero {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -151,10 +192,42 @@ export default Vue.extend({
   font-size: 0.9rem;
   margin-bottom: 2.5rem;
 }
+.timer {
+  font-size: 80px;
+  font-family: Fira Code, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+    monospace;
+  padding-bottom: 20px;
+}
+.wallet {
+  font-size: 20px;
+  font-family: Fira Code, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+    monospace;
+  padding-bottom: 20px;
+  color: gray;
+}
 
 @media only screen and (max-width: 768px) {
   .liontext {
     font-size: 3.2rem;
+    margin-bottom: 10px;
+  }
+  .timer {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+  .logo-img {
+    height: 20vh;
+  }
+  .btn {
+    padding: 1.2rem;
+    margin: 0.5rem;
+  }
+  .logo-sub {
+    margin-bottom: 1rem;
+  }
+  .wallet {
+    font-size: 15px;
+    padding-bottom: 10px;
   }
 }
 .logo-sub {

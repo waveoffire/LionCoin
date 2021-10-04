@@ -10,11 +10,11 @@
         id="w-node-d23b6533-20aa-100c-6817-34ece76dab3f-96fbd0ad"
         class="timeline-wrapper"
       >
-        <div style="font-weight: 500" class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
-        <div class="timeline-dot">Q2</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-dot">Q3</div>
+        <div class="timeline-dot">Q4</div>
+        <div class="timeline-dot">Q1</div>
+
         <div class="timeline-line-wrapper">
           <div id="timeline" class="time-line" style="height: 0%"></div>
         </div>
@@ -22,57 +22,53 @@
       <div class="text-div">
         <div
           class="dot-text"
-          ddata-aos-anchor-placement="center-center"
+          ddata-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-right"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, autem
-          delectus quaerat ullam quasi officia natus assumenda itaque, earum
-          repudiandae sunt aliquid labore adipisci est doloribus ea facere nulla
-          ab.
+          <span> Project launch</span><br />
+          - Launching the pre-sale<br />
+          - Community building<br />
+          - Launch of website and social channels<br />
+          - Creating the marketing and production plan<br />
+          - Aidrop to the most devoted holders <br />
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-left"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          eos dignissimos enim tempore, rerum necessitatibus odio est cumque
-          alias corrupti itaque odit repellat eligendi exercitationem facere.
-          Earum modi necessitatibus mollitia.
+          <span>2021</span><br />
+          - Establishing marketing cooperations<br />
+          - Listing applications on the most popular services<br />
+          - Announcement of unique NFT store portal focused on music project
+          <br />
+          - Consultation of the charity program with the community <br />
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-right"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum ad
-          possimus dolores iusto vel enim error culpa qui! Dolor eveniet
-          repellendus praesentium magni molestiae excepturi distinctio, eligendi
-          quasi delectus suscipit!
+          <span>2021</span><br />
+          - Further marketing expansion<br />
+          - NFT store release<br />
+          - Applying for cex listing (HotBit/KuCoin/Gate.io)<br />
+          - Starting work on mobile app project<br />
         </div>
         <div
           class="dot-text"
-          data-aos-anchor-placement="center-center"
+          data-aos-anchor-placement="bottom-bottom"
           data-aos="fade-up-left"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-          possimus nesciunt tenetur ipsa quos incidunt, inventore asperiores
-          veritatis, magni vero a est ab distinctio aperiam dolorum libero
-          repellendus quidem? Adipisci.
-        </div>
-        <div
-          class="dot-text"
-          data-aos-anchor-placement="center-center"
-          data-aos="fade-up-right"
-          data-aos-duration="1000"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel magnam
-          veniam quam ea ex sint quo? Recusandae illum excepturi rerum, eius,
-          mollitia inventore est qui adipisci a esse quibusdam.
+          <span>2022</span><br />
+          - Mobile app release <br />
+          - Rare 3D NFTs release<br />
+          - Charity program expanding<br />
+          - Expanding artist cooperation to enrich our NFT portfolio<br />
         </div>
       </div>
     </div>
@@ -101,7 +97,7 @@ export default Vue.extend({
       var dot = document.getElementsByClassName("timeline-dot");
       var textbox = document.getElementsByClassName("dot-text");
       for (var i = 0; i < dot.length; i++) {
-        if (percent >= i * 25) {
+        if (percent >= i * 33) {
           if (dot[i].style.backgroundColor != "#14ffa1") {
             dot[i].style.backgroundColor = "#14ffa1";
           }
@@ -122,7 +118,7 @@ export default Vue.extend({
   mounted() {
     this.height =
       document.getElementById("timeline").getBoundingClientRect().top -
-      window.innerHeight / 2 +
+      (window.innerHeight / 100) * 90 +
       window.scrollY;
     this.timeline();
   },
@@ -214,6 +210,12 @@ export default Vue.extend({
 }
 
 .dot-text {
+  span {
+    font-size: 30px;
+    display: block;
+    font-family: Fira Code, Menlo, Monaco, Consolas, Liberation Mono,
+      Courier New, monospace;
+  }
   border-radius: 25px;
   position: relative;
   width: 40%;

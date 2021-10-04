@@ -5,6 +5,7 @@
       <hero-app />
       <div class="desc">
         <span class="particles-gif" alt="this slowpoke moves" />
+        <roadmap-app />
         <tokenomics-app />
         <how-to-app />
         <roadmap-app />

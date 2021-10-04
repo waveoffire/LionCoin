@@ -11,6 +11,8 @@
       </div>
       <nav class="nav">
         <ul v-if="!mobile" class="nav-list">
+          <li><a class="nav-item" href="#hero">Home</a></li>
+          <li><a class="nav-item" href="#roadmap">Roadmap</a></li>
           <li><a class="nav-item" href="#tokenomics">Tokenomics</a></li>
           <li><a class="nav-item" href="#how-to">How To Buy</a></li>
           <li><a class="nav-item" href="#roadmap">Roadmap</a></li>
@@ -28,6 +30,11 @@
         style="display: block; text-align: right"
         class="nav-list mobilemenu"
       >
+        <li><a @click="menuToggle()" class="nav-item" href="#hero">Home</a></li>
+
+        <li>
+          <a @click="menuToggle()" class="nav-item" href="#roadmap">Roadmap</a>
+        </li>
         <li>
           <a @click="menuToggle()" class="nav-item" href="#tokenomics"
             >Tokenomics</a
@@ -38,13 +45,9 @@
             >How To Buy</a
           >
         </li>
+
         <li>
-          <a @click="menuToggle()" class="nav-item" href="#roadmap">Roadmap</a>
-        </li>
-        <li>
-          <a @click="menuToggle()" class="nav-item" href="#token-info"
-            >Token Info</a
-          >
+          <a @click="menuToggle()" class="nav-item" href="#charity">Charity</a>
         </li>
 
         <li>
